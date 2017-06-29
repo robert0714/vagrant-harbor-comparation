@@ -1,0 +1,12 @@
+hosts: [
+  { host_ip: "192.168.57.44", host_name: "harbor-registry-1"},
+  { host_ip: "192.168.57.45", host_name: "harbor-registry-2"}
+]
+
+obsolete_services:
+  - puppet
+  - chef-client
+
+centos_files: [
+     { src: "centos.sshd_config", dest: "/etc/ssh/sshd_config" },
+  ]
